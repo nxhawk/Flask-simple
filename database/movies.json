@@ -1,52 +1,64 @@
 {
-  "movies":[
-    {
-      "name":"Bố già",
-      "rate":9.2,
-      "year":1972,
-      "userAdd":"hao"
-    },
-    {
-      "name":"Chiến Hữu",
-      "rate":8.7,
-      "year":1990,
-      "userAdd":"tao"
-    },
-    {
-      "name":"Chuyện tào lao",
-      "rate":8.9,
-      "year":1994,
-      "userAdd":"nhat"
-    },
-    {
-      "name":"Nghi phạm vô hình",
-      "rate":8.5,
-      "year":1995,
-      "userAdd":"long"
-    },
-    {
-      "name":"Bố già",
-      "rate":9.2,
-      "year":1972,
-      "userAdd":"hao"
-    },
-    {
-      "name":"Chiến Hữu",
-      "rate":8.7,
-      "year":1990,
-      "userAdd":"tao"
-    },
-    {
-      "name":"Chuyện tào lao",
-      "rate":8.9,
-      "year":1994,
-      "userAdd":"nhat"
-    },
-    {
-      "name":"Nghi phạm vô hình",
-      "rate":8.5,
-      "year":1995,
-      "userAdd":"long"
-    }
-  ]  
+    "movies": [
+        {
+            "name": "Ma trận",
+            "rate": "8.7",
+            "year": "1999",
+            "userAdd": "h"
+        },
+        {
+            "name": "kỵ sĩ bóng đêm",
+            "rate": "9",
+            "year": "2008",
+            "userAdd": "hao"
+        },
+        {
+            "name": "Bố già",
+            "rate": 9.2,
+            "year": 1972,
+            "userAdd": "hao"
+        },
+        {
+            "name": "Chiến Hữu",
+            "rate": 8.7,
+            "year": 1990,
+            "userAdd": "tao"
+        },
+        {
+            "name": "Chuyện tào lao",
+            "rate": 8.9,
+            "year": 1994,
+            "userAdd": "nhat"
+        },
+        {
+            "name": "Nghi phạm vô hình",
+            "rate": 8.5,
+            "year": 1995,
+            "userAdd": "long"
+        },
+        {
+            "name": "Bố già",
+            "rate": 9.2,
+            "year": 1972,
+            "userAdd": "hao"
+        },
+        {
+            "name": "Chiến Hữu",
+            "rate": 8.7,
+            "year": 1990,
+            "userAdd": "tao"
+        },
+        {
+            "name": "Chuyện tào lao",
+            "rate": 8.9,
+            "year": 1994,
+            "userAdd": "nhat"
+        },
+        {
+            "name": "Nghi phạm vô hình",
+            "rate": 8.5,
+            "year": 1995,
+            "userAdd": "long"
+        }
+    ]
 }
