@@ -1,12 +1,13 @@
 import json
 import os
 
+file1 = os.path.dirname(os.path.abspath(__file__)).replace(
+    __file__, '').replace('function', '') + 'database\\isLogin.json'
+
 
 def _login(usr, psw):
     file = os.path.dirname(os.path.abspath(__file__)).replace(
         __file__, '').replace('function', '') + 'database\\account.json'
-    file1 = os.path.dirname(os.path.abspath(__file__)).replace(
-        __file__, '').replace('function', '') + 'database\\isLogin.json'
 
     with open(file, 'r') as f:
         data_list = json.load(f)
@@ -26,3 +27,10 @@ def _login(usr, psw):
                 return True
         else:
             return False
+
+
+def _logout():
+    with open(file1, 'rb') as fk:
+        data = json.load(fk)
+        data['usr'].pop(-1)
+        open(file1, "w").write(json.dumps(data, indent=4))
