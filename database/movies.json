@@ -1,64 +1,39 @@
 {
     "movies": [
         {
-            "name": "Ma trận",
+            "name": "lời sấm truyền",
+            "rate": "8.5",
+            "year": "1975",
+            "userAdd": "long",
+            "editBy": "long"
+        },
+        {
+            "name": "nghi phạm vô hình",
+            "rate": "8.5",
+            "year": "1995",
+            "userAdd": "long",
+            "editBy": "long"
+        },
+        {
+            "name": "Chuyện Tào Lao",
+            "rate": "8.9",
+            "year": "1994",
+            "userAdd": "long",
+            "editBy": "long"
+        },
+        {
+            "name": "Chiến Hữu",
             "rate": "8.7",
-            "year": "1999",
-            "userAdd": "h"
-        },
-        {
-            "name": "kỵ sĩ bóng đêm",
-            "rate": "9",
-            "year": "2008",
-            "userAdd": "hao"
+            "year": "1990",
+            "userAdd": "nhat",
+            "editBy": "hao"
         },
         {
             "name": "Bố già",
-            "rate": 9.2,
-            "year": 1972,
-            "userAdd": "hao"
-        },
-        {
-            "name": "Chiến Hữu",
-            "rate": 8.7,
-            "year": 1990,
-            "userAdd": "tao"
-        },
-        {
-            "name": "Chuyện tào lao",
-            "rate": 8.9,
-            "year": 1994,
-            "userAdd": "nhat"
-        },
-        {
-            "name": "Nghi phạm vô hình",
-            "rate": 8.5,
-            "year": 1995,
-            "userAdd": "long"
-        },
-        {
-            "name": "Bố già",
-            "rate": 9.2,
-            "year": 1972,
-            "userAdd": "hao"
-        },
-        {
-            "name": "Chiến Hữu",
-            "rate": 8.7,
-            "year": 1990,
-            "userAdd": "tao"
-        },
-        {
-            "name": "Chuyện tào lao",
-            "rate": 8.9,
-            "year": 1994,
-            "userAdd": "nhat"
-        },
-        {
-            "name": "Nghi phạm vô hình",
-            "rate": 8.5,
-            "year": 1995,
-            "userAdd": "long"
+            "rate": "9.2",
+            "year": "1972",
+            "userAdd": "nhat",
+            "editBy": "nhat"
         }
     ]
 }
