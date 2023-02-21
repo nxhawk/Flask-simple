@@ -6,3 +6,5 @@ Các chức năng: đăng nhập, đăng kí tài khoản, thêm (xóa, sửa) t
 
 Views frontend khá a đùi =)) (html css js cơ bản, không dùng framework).
 
+Dữ liệu phim lấy thông tin từ `The 1000 Greatest Films of All Time` [[IMDb](https://www.imdb.com/list/ls006266261/)].
+
