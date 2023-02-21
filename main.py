@@ -2,7 +2,7 @@ from flask import Flask, redirect, render_template, request, url_for
 from function.newAcc import newAcc
 from function.login import _login, _logout
 from function.isLogin import isLogin
-from function.handelMovie import _addMovie, _getAllMovie
+from function.handelMovie import _addMovie, _delMovie, _editMovie, _getAllMovie
 
 app = Flask(__name__)
 
@@ -55,11 +55,20 @@ def logout():
     return redirect(url_for('login'))
 
 
-@app.route('/newMovie', methods=['POST'])
+@app.route('/movie', methods=['POST', 'DELETE', 'PUT'])
 def newMovie():
-    data = request.get_json()
-    _addMovie(data)
-    return redirect(url_for('welcome_view', user="f"))
+    if request.method == 'POST':
+        data = request.get_json()
+        _addMovie(data)
+        return redirect(url_for('welcome_view', user="f"))
+    if request.method == 'DELETE':
+        data = request.get_json()
+        _delMovie(data)
+        return {'msg': 'ok'}
+    if request.method == 'PUT':
+        data = request.get_json()
+        _editMovie(data)
+        return {'msg': 'ok'}
 
 
 if __name__ == '__main__':
