@@ -1,4 +1,4 @@
-#Flask
+# Flask
 
 Project dùng flask-python để làm backend và handle frontend (views).
 
