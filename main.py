@@ -1,7 +1,8 @@
 from flask import Flask, redirect, render_template, request, url_for
 from function.newAcc import newAcc
-from function.login import _login
+from function.login import _login, _logout
 from function.isLogin import isLogin
+from function.handelMovie import _getAllMovie
 
 app = Flask(__name__)
 
@@ -10,7 +11,8 @@ app = Flask(__name__)
 def welcome_view(user):
     if not isLogin(user):
         return 'Not Found 404'
-    return render_template('index.html', user=user)
+
+    return render_template('index.html', user=user, movies=_getAllMovie())
 
 
 @app.route('/sum/<int:first_num>/<int:second_num>')
@@ -44,6 +46,12 @@ def register():
             return f'New account with <br/> username: <b>{usr}</b> <br/> password: <b>{psw}</b>'
         else:
             return f'Username: <b>{usr}</b> is already!'
+
+
+@app.route('/logout')
+def logout():
+    _logout()
+    return redirect(url_for('login'))
 
 
 if __name__ == '__main__':
