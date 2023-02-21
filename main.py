@@ -2,7 +2,7 @@ from flask import Flask, redirect, render_template, request, url_for
 from function.newAcc import newAcc
 from function.login import _login, _logout
 from function.isLogin import isLogin
-from function.handelMovie import _getAllMovie
+from function.handelMovie import _addMovie, _getAllMovie
 
 app = Flask(__name__)
 
@@ -48,10 +48,18 @@ def register():
             return f'Username: <b>{usr}</b> is already!'
 
 
-@app.route('/logout')
+@app.route('/logout', methods=['POST'])
 def logout():
-    _logout()
+    user = request.get_json()
+    _logout(user['user'])
     return redirect(url_for('login'))
+
+
+@app.route('/newMovie', methods=['POST'])
+def newMovie():
+    data = request.get_json()
+    _addMovie(data)
+    return redirect(url_for('welcome_view', user="f"))
 
 
 if __name__ == '__main__':
