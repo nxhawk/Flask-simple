@@ -15,7 +15,7 @@
   </head>
   <body>
     <header>
-      <h1 class="user">Hello <span>{{user}}</span></h1>
+      <h1 class="user">Hello <span data-usr="{{user}}">{{user}}</span></h1>
       <p class="helo">Chào bạn đến với website <3</p>
     </header>
     <div class="container">
@@ -30,6 +30,25 @@
     </div>
 
     <button id="logout">Logout</button>
+    <button id="new">New</button>
+
+    <div id="modal">
+      <h2>New Movie</h2>
+      <div class="col">
+        <label for="">Name:</label>
+        <input type="text" placeholder="name" name="name" />
+      </div>
+      <div class="col">
+        <label for="">Rate : </label>
+        <input type="text" placeholder="rate" name="rate" />
+      </div>
+      <div class="col">
+        <label for="">Year : </label>
+        <input type="text" placeholder="year" name="year" />
+      </div>
+      <button id="submit">Add</button>
+      <button id="close">X</button>
+    </div>
   </body>
   <script src="../static/js/main.js"></script>
 </html>
