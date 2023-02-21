@@ -29,8 +29,11 @@ def _login(usr, psw):
             return False
 
 
-def _logout():
+def _logout(user):
+    print(user)
     with open(file1, 'rb') as fk:
         data = json.load(fk)
-        data['usr'].pop(-1)
+        if user in data['usr']:
+            index = data['usr'].index(user)
+            data['usr'].pop(index)
         open(file1, "w").write(json.dumps(data, indent=4))
