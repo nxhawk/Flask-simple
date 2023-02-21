@@ -4,10 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <link rel="stylesheet" href="../static/css/home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Home Page</title>
   </head>
   <body>
-    <h1>Hello {{user}}</h1>
-    <p>Chào bạn đến với website <3</p>
+    <header>
+      <h1 class="user">Hello <span>{{user}}</span></h1>
+      <p class="helo">Chào bạn đến với website <3</p>
+    </header>
+    <div class="container">
+      {% for i in range(movies|length)%}
+      <div class="movie" data-id="{{i}}">
+        <div class="name">Name: {{movies[i].name}}</div>
+        <div class="rate">Rate: {{movies[i].rate}}</div>
+        <div class="year">Year: {{movies[i].year}}</div>
+        <div class="add">Add by: {{movies[i].userAdd}}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <button id="logout">Logout</button>
   </body>
+  <script src="../static/js/main.js"></script>
 </html>
