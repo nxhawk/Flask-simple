@@ -11,6 +11,13 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Home Page</title>
   </head>
   <body>
@@ -21,12 +28,22 @@
     <div class="container">
       {% for i in range(movies|length)%}
       <div class="movie" data-id="{{i}}">
-        <div class="name">Name: {{movies[i].name}}</div>
-        <div class="rate">Rate: {{movies[i].rate}}</div>
-        <div class="year">Year: {{movies[i].year}}</div>
-        <div class="add">Add by: {{movies[i].userAdd}}</div>
+        <div class="col1">
+          <div class="name">Name: <span>{{movies[i].name}}</span></div>
+          <div class="rate">Rate: <span>{{movies[i].rate}}</span></div>
+          <div class="year">Year: <span>{{movies[i].year}}</span></div>
+          <div class="add">Add by: <span>{{movies[i].userAdd}}</span></div>
+          <div class="editL">Edit by: <span>{{movies[i].editBy}}</span></div>
+        </div>
+        <div class="col2">
+          <i class="fas fa-trash-alt del"></i>
+          <i class="fas fa-pencil-alt edit"></i>
+        </div>
       </div>
-      {% endfor %}
+      {% endfor %} {% if movies|length < 1 %}
+      <div class="note">Hiện tại không có bộ nào, hãy thêm mới</div>
+      {% endif %}
+      <div class="dev">Dev by: nxhawk</div>
     </div>
 
     <button id="logout">Logout</button>
