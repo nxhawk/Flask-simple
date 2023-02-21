@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  color: #ECF2FF;
+}
+
+header{
+  background-color: #000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header.active{
+  background-color: #242222;
+}
+
+.user{
+  color: #FCE22A;
+  text-align: center;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+
+.user span{
+  color: #F94A29;
+}
+
+.helo{
+  text-align: center;
+  font-size: 2rem;
+  color: #AD7BE9;
+}
+
+.container{
+  padding-top: 100px;
+}
+
+.movie{
+  width: 80%;
+  margin: 0 auto;
+  color: #f5e9e9;
+  background-color: #EB455F;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.movie:hover{
+  background-color: #F16767;
+
+}
+
+.add, .name{
+  text-transform: capitalize;
+}
+
+#logout{
+  position: fixed;
+  top: 20px;
+  right: 5%; 
+}
+
+button#logout{
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background: red;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+button{
+  transition: all .2s ease;
+
+}
+
+#logout:hover{
+  background-color: #EB455F;
+  border: 2px solid #000;
+  color: #000;
+
+}
